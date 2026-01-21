@@ -60,7 +60,7 @@ systemctl restart openvpn@server
 <img width="1651" height="878" alt="Image" src="https://github.com/user-attachments/assets/17b0052a-ea79-4c5c-9cd4-37de8a45d6b2" />
 <img width="1025" height="592" alt="Image" src="https://github.com/user-attachments/assets/e085b1f4-14c0-479d-af64-65e43f538229" />
 
-> Thêm 2 dòng sau vào Client Profile để active
+> Thêm 2 dòng sau vào Client Profile để active xác thực 2FA cho user
 ``` shell
 auth-user-pass
 reneg-sec 0
@@ -74,3 +74,11 @@ reneg-sec 0
 ``` shell
 journalctl -u openvpn@server -f
 ```
+
+Import profile vào app OpenVPN Connect
+ - Username: nhập bất kỳ không cần đúng user VPN đã tạo
+ - Password: nhập push để đẩy thông báo về điện thoại hoặc nhập code sinh ra từ app Duo Mobile
+ - Private Key Password: nhập password khi tạo user vpn (đối với user tạo không password thì không có ô này)
+<img width="402" height="676" alt="Image" src="https://github.com/user-attachments/assets/831a6395-74f8-4616-95f2-4790ca29cf03" />
+
+<img width="394" height="674" alt="Image" src="https://github.com/user-attachments/assets/a408292d-2519-4ab8-8ce5-6ed07e9ed2ef" />
