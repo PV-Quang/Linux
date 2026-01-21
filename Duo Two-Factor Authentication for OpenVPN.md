@@ -14,13 +14,13 @@ Applications → Application Catalog -> OpenVPN -> Add
 ### Tạo User
 Username được tạo trên Duo phải giống Username trên OenVPN Server
 <p>
-Users -> Users -> Add User -> Nhập thông tin User.
+Users -> Users -> Add User -> Nhập thông tin User
 <p>
 <img width="1729" height="805" alt="Image" src="https://github.com/user-attachments/assets/3b82dae1-f75a-4faa-b6ba-ba32b3447841" />
 
-Đối với trường hợp bạn đã từng cài Duo Mobile và đã kích hoạt sđt + app thì khi add user mới rồi gắn cùng số điện thoại, Duo sẽ tự nhận biết thiết bị đã được trust rồi, không cần kích hoạt nữa.
+Đối với trường hợp bạn đã từng cài Duo Mobile và đã kích hoạt sđt + app thì khi add user mới rồi gắn cùng số điện thoại, Duo sẽ tự nhận biết thiết bị đã được trust rồi, không cần kích hoạt nữa
 <p>
-Đối với trường hợp thiết bị chưa từng kết nối với Duo tiến hành kích hoạt như sau.
+Đối với trường hợp thiết bị chưa từng kết nối với Duo tiến hành kích hoạt như sau
 
 > Edit User và nhấn Send email
 <img width="1909" height="833" alt="Image" src="https://github.com/user-attachments/assets/4682c1dd-1d8c-4139-a069-7ef4d71d5067" />
@@ -53,7 +53,7 @@ plugin /opt/duo/duo_openvpn.so "IKEY SKEY API_HOST"
 reneg-sec 0
 ```
 
-> Lưu ý thay thông tin "IKEY SKEY API_HOST" bằng thông tin xác thực của OpenVPN Application trên Duo và resatrt service OpenVPN
+> Lưu ý thay thông tin "IKEY SKEY API_HOST" bằng thông tin xác thực của OpenVPN Application trên Duo và restart service OpenVPN
 ``` shell
 systemctl restart openvpn@server
 ```
