@@ -1,4 +1,4 @@
- ## 1. HƯỚNG DẪN CẤU HÌNH 2FA CHO OPENVPN DÙNG DUO
+ ## HƯỚNG DẪN CẤU HÌNH 2FA CHO OPENVPN DÙNG DUO
 
 > Link hướng dẫn cài đặt từ trang chủ Duo: https://duo.com/docs/openvpn
 
