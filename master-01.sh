@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
-
 exec > >(tee -a /var/log/k8s.log) 2>&1
-
 echo "[INFO] Start at $(date)"
 
 rm -rf /etc/netplan/*
-
 cat > /etc/netplan/k8s.yaml <<'EOF'
 network:
   version: 2
@@ -31,7 +28,6 @@ netplan apply
 systemctl enable --now systemd-resolved.service
 systemctl restart systemd-resolved.service
 ln -sf /var/run/systemd/resolve/resolv.conf /etc/resolv.conf
-
 hostnamectl set-hostname master-04.pvq.lab
 timedatectl set-timezone Asia/Ho_Chi_Minh
 
@@ -102,7 +98,6 @@ apt update
 apt install -y kubelet kubeadm kubectl
 apt-mark hold kubelet kubeadm kubectl
 
-
 kubeadm init --pod-network-cidr 192.168.0.0/16 --service-cidr 10.96.0.0/12 --control-plane-endpoint master-04.pvq.lab --apiserver-cert-extra-sans 40.0.0.14 --apiserver-cert-extra-sans master-04 --apiserver-cert-extra-sans 61.14.236.249
 
 sleep 10
@@ -124,12 +119,8 @@ done
 echo "[INFO] Applying Calico CNI..."
 
 kubectl apply --validate=false -f https://raw.githubusercontent.com/projectcalico/calico/v3.30.0/manifests/tigera-operator.yaml
-
 sleep 15
-
 kubectl apply --validate=false -f https://raw.githubusercontent.com/projectcalico/calico/v3.30.0/manifests/custom-resources.yaml
-
-
 sleep 10
 echo "[INFO] Done at $(date)"
 
