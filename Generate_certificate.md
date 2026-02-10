@@ -49,8 +49,3 @@ zip -r /etc/letsencrypt/live/quangpv.tech.zip /etc/letsencrypt/live/quangpv.tech
 ![16](Image/16.png)
 
 
-
- - Private Key Password: nhập password khi tạo user vpn (đối với user tạo không password thì không có ô này)
-
-![11](Image/11.png)
-![12](Image/12.png)
