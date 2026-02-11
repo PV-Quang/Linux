@@ -48,4 +48,22 @@ zip -r /etc/letsencrypt/live/quangpv.tech.zip /etc/letsencrypt/live/quangpv.tech
 
 ![16](Image/16.png)
 
+### Tạo file .pfx
+``` shell
+openssl pkcs12 -export -out certificate.pfx -inkey privatekey.pem -in certificate.pem
+```
 
+### CA bundle
+```shell
+certificate.pem -> intermedia.crt.cer -> Root CA.cer (chain)
+```
+
+### Note
+
+cert.pem - file public key
+<p>
+privkey.pem - file private 
+<p>
+chain.pem - file CA
+<p>
+fullchain	file - cert + file CA	CA bundle
