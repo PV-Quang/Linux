@@ -43,7 +43,7 @@ nslookup -type=TXT _acme-challenge.quangpv.tech 8.8.8.8
 
 > Nén thư mục chứa cert để download về
 ``` shell
-zip -r /etc/letsencrypt/live/quangpv.tech.zip /etc/letsencrypt/live/quangpv.tech/ certonly --manual --preferred-challenges dns --key-type rsa --rsa-key-size 2048 -d "*.quangpv.tech" -d quangpv.tech
+zip -r /etc/letsencrypt/live/quangpv.tech.zip /etc/letsencrypt/live/quangpv.tech/
 ```
 
 ![16](Image/16.png)
