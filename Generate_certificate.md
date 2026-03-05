@@ -13,7 +13,7 @@ apt -y install certbot
 ### Tạo Certificate
 > Chạy lệnh sau để tạo cert
 ``` shell
-certbot certonly --manual --preferred-challenges dns --key-type rsa --rsa-key-size 2048 -d "*.quangpv.tech" -d quangpv.tech
+certbot certonly --manual --preferred-challenges dns --key-type rsa --rsa-key-size 2048 -d "*.quangpv.tech"
 ```
 ![11](Image/11.png)
 
