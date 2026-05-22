@@ -43,6 +43,7 @@ write_files:
       sed -i '3i\\' /etc/hosts
 
 
+
       echo "[INFO] Waiting for network..."
       for i in $(seq 1 30); do
         if ping -c1 -W1 8.8.8.8 >/dev/null 2>&1; then
